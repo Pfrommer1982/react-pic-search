@@ -22,12 +22,12 @@ const FindPhotos = ({ onSearch }) => {
   };
 
   return (
-    <form className="max-w-sm mx-auto mt-4" onSubmit={searchPhotos}>
+    <form className="max-w-sm mx-auto mt-4 sm:max-w-xs" onSubmit={searchPhotos}>
       <div className="searchbar flex items-center border-b border-b-2 border-gray-500 py-2">
         <input
           type="text"
           name="query"
-          className="appearance-none text-center bg-transparent border-none flex-grow text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          className="appearance-none text-center bg-transparent border-none flex-grow text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none text-sm sm:text-base"
           placeholder="Search anything here"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -41,7 +41,6 @@ const FindPhotos = ({ onSearch }) => {
       </div>
     </form>
   );
-  
 };
 
 export default FindPhotos;
