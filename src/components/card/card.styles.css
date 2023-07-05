@@ -1,0 +1,52 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: zoom-in;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 0px 0.5px rgb(179, 178, 178);
+}
+
+h2 {
+  padding-top: 10px;
+  font-size: 3rem;
+}
+
+.owner {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding-top: 20px;
+  margin-bottom: -20px;
+}
+
+.card-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-container {
+  transition: transform 0.3s;
+  max-height: 90vh;
+}
+
+.card-container.enlarged {
+  transform: translate(-50%, -50%) scale(2.4);
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  max-height: none;
+  cursor: zoom-out; 
+}

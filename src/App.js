@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CardList from "./components/card-list/card-list.component";
+import FindPhotos from "./components/FindPhotos/FindPhotos";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [searchField, setSearchField] = useState("");
+
+  const handleSearch = (searchTerm) => {
+    setSearchField(searchTerm);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="app-title">Random Pictures</h1>
+      <h2 className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">In the search bar, type a category like 'space', 'woods', or anything you like!</h2>
+      <FindPhotos onSearch={handleSearch} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <CardList searchField={searchField} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

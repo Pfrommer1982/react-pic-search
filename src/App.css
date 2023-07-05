@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200&family=Signika:wght@300&display=swap');
+
+body {
+  margin: 0;
+  margin-bottom: 125px;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 2rem;
+  text-align: center;  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.app-title {
+  margin-top: 75px;
+  margin-bottom: 50px;
+  font-size: 100px;
+  color: #afb6b6;
+  font-family: 'Signika', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-explaination {
+  margin-top: -30px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+  margin: 50px auto auto 10px;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  color:rgb(59, 60, 65);
+  padding: 20px;
+  font-size: 40px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
